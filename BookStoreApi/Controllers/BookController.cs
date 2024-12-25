@@ -71,6 +71,7 @@ namespace BookStoreApi.Controllers
         {
             try
             {
+                if(book_id == 0) return StatusCode(StatusCodes.Status400BadRequest, "გთხოვთ მიუთთოთ ვალიდური წიგნი");
                 var book = books_package.get_book_by_id(book_id);
                 if(book != null)
                 {
