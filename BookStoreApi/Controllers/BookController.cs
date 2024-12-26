@@ -28,7 +28,7 @@ namespace BookStoreApi.Controllers
                 {
                     return StatusCode(StatusCodes.Status400BadRequest, "წიგნი არ შეიძლება იყოს ცარიელი");
                 }
-                return StatusCode(StatusCodes.Status200OK, "წიგნი წარმატებით დაემატა");
+                return Ok();
 
             }
             catch (Exception ex)
@@ -82,7 +82,7 @@ namespace BookStoreApi.Controllers
                     return StatusCode(StatusCodes.Status400BadRequest, "გთხოვთ მიუთთოთ ვალიდური წიგნი");
 
                 }
-                return StatusCode(StatusCodes.Status200OK, "წიგნი წარმატებით წაიშალა");
+                return Ok();
             }
             catch (Exception ex)
             {
